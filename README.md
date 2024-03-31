@@ -4,11 +4,9 @@ Collection of my most used mods for Balatro.
 
 ## Mods
 
-- DebugMode
-- EscapeExitButton
 - RunReviewer
 - Colour Selector
-- Deck Creator
-- MikasModCollection
 - AbsoluteDeck
+- MikasModCollection
+- BetterMouseAndGamepad
 - Hilly Mod (Custom, WIP)

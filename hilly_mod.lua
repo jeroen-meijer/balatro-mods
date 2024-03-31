@@ -13,40 +13,26 @@ function SMODS.INIT.DecColors()
     sprite_card:register()
 end
 
-function SMODS.INIT.jay_mod()
+function SMODS.INIT.HillyMod()
     local language_key = "en-us"
 
-    -- local function apply_sprites()
-    --     local sprite_bstr = SMODS.Sprite:new("Booster", mod.path, "boosters.png", 71, 95, "asset_atli")
-    --     local sprite_trts = SMODS.Sprite:new("Tarot", mod.path, "Tarots.png", 71, 95, "asset_atli")
-    --     local sprite_vchr = SMODS.Sprite:new("Voucher", mod.path, "Vouchers.png", 71, 95, "asset_atli")
-    --     local sprite_icon = SMODS.Sprite:new("icons", mod.path, "icons.png", 66, 66, "asset_atli")
-    --     local sprite_blch = SMODS.Sprite:new("blind_chips", mod.path, "BlindChips.png", 34, 34, "animation_atli", 21)
-    --     local sprite_jokr = SMODS.Sprite:new("Joker", mod.path, "Jokers.png", 71, 95, "asset_atli")
-    --     local sprite_shop = SMODS.Sprite:new("shop_sign", mod.path, "ShopSignAnimation.png", 113, 57, "animation_atli",
-    --         4)
-
-    --     sprite_bstr:register()
-    --     sprite_trts:register()
-    --     sprite_vchr:register()
-    --     sprite_icon:register()
-    --     sprite_blch:register()
-    --     sprite_jokr:register()
-    --     sprite_shop:register()
-    -- end
-
-    local function apply_patch()
-        G.localization = jay_mod_localizations
+    local function apply_localization_patch()
+        G.localization = hilly_mod_localizations
         init_localization()
-        -- apply_sprites()
     end
 
     if G.LANG.key == language_key then
-        apply_patch()
+        apply_localization_patch()
     end
 
     G.set_language_ref = G.set_language
     function G:set_language()
+        self:set_language_ref()
+
+        if self.LANG.key == language_key then
+            apply_localization_patch()
+        end
+
         -- G.LANGUAGES['hilly'] = {
         --     font = 1,
         --     label = "Hilly",
@@ -54,16 +40,29 @@ function SMODS.INIT.jay_mod()
         --     button = "Language Feedback",
         --     warning = {'This language is a shitpost.', 'Do not use it.', 'Click again to confirm'}
         -- }
-
-        self:set_language_ref()
-
-        if self.LANG.key == language_key then
-            apply_patch()
-        end
     end
+
+    -- FIXME: Doesn't work yet
+
+    -- local function apply_suit_colors_patch(self)
+    --     self.C.SO_1 = {
+    --         Hearts = HEX('AB0003'),
+    --         Clubs = HEX("F44D11"),
+    --         Diamonds = HEX('85006E'),
+    --         Spades = HEX("145399")
+    --     }
+    -- end
+
+    -- apply_suit_colors_patch(G)
+
+    -- G.set_globals_ref = G.set_globals
+    -- function G:set_globals()
+    --     self:set_globals_ref()
+    --     apply_suit_colors_patch(self)
+    -- end
 end
 
-jay_mod_localizations = {
+hilly_mod_localizations = {
     descriptions = {
         Joker = {
             j_joker = {
@@ -778,7 +777,7 @@ jay_mod_localizations = {
             },
             j_triboulet = {
                 name = "Triboulet",
-                text = {"Played {C:attention}Laurenss{} and", "{C:attention}Quintens{} each give",
+                text = {"Played {C:attention}Laurenses{} and", "{C:attention}Quintens{} each give",
                         "{X:mult,C:white} X#1# {} Mult when scored"},
                 unlock = {"{E:1,s:1.3}?????"}
             },
