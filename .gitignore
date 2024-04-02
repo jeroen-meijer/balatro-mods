@@ -1,1 +1,15 @@
 *.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+__MACOSX
+
+# Windows
+ehthumbs.db
+Thumbs.db
