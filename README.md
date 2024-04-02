@@ -5,8 +5,7 @@ Collection of my most used mods for Balatro.
 ## Mods
 
 - RunReviewer
-- Colour Selector
-- AbsoluteDeck
+- JimbosHistories
 - MikasModCollection
 - BetterMouseAndGamepad
 - Hilly Mod (Custom, WIP)
