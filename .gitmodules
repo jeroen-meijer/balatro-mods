@@ -1,0 +1,9 @@
+[submodule "JimbosHistories"]
+	path = JimbosHistories
+	url = https://github.com/Mi1cK/Jimbos-Histories
+[submodule "BetterMouseAndGamepad"]
+	path = BetterMouseAndGamepad
+	url = https://github.com/Kooluve/Better-Mouse-And-Gamepad
+[submodule "MikasModCollection"]
+	path = MikasModCollection
+	url = https://github.com/MikaSchoenmakers/MikasBalatro
