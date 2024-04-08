@@ -195,7 +195,7 @@ return {
             j_odd_todd = {
                 name = "Odd Todd",
                 text = {"Played cards with", "{C:attention}odd{} rank give", "{C:chips}+#1#{} Chips when scored",
-                        "{C:inactive}(A, 9, 7, 5, 3)"}
+                        "{C:inactive}(D, 9, 7, 5, 3)"}
             },
             j_scholar = {
                 name = "Scholar",
