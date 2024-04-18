@@ -43,8 +43,8 @@ function SMODS.INIT.HillyMod()
     end
 
     -- fix voor texturepack rank van ace en king voor de hover over current cards menu
-
-    SMODS.Card.RANK_LIST = { '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'L', 'D' }
+    --works on steammodded 0.9.5 but not on 0.9.8
+    --SMODS.Card.RANK_LIST = { '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'L', 'D' }
 
 
     -- FIXME: Doesn't work yet
