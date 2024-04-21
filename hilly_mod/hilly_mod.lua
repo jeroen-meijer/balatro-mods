@@ -13,7 +13,7 @@ function SMODS.INIT.HillyMod()
     sprite_card:register()
 
     -- Set up localizations
-    local language_key = "en-us"
+    --local language_key = "en-us" -- denk dat dit de voucher pack mod liet crashen maar idk
     local lang_path = mod.path .. "l10n.lua"
 
     local function apply_localization_patch()
@@ -25,13 +25,15 @@ function SMODS.INIT.HillyMod()
         apply_localization_patch()
     end
 
-    G.set_language_ref = G.set_language
-    function G:set_language()
-        self:set_language_ref()
+    -- onderstaand code block weggehaald zodat voucher pack werkt, lijkt geen functionaliteit te hebben?
 
-        if self.LANG.key == language_key then
-            apply_localization_patch()
-        end
+    --G.set_language_ref = G.set_language
+    --function G:set_language()
+    --    self:set_language_ref()
+
+   --     if self.LANG.key == language_key then
+   --         apply_localization_patch()
+   --     end
 
         -- G.LANGUAGES['hilly'] = {
         --     font = 1,
@@ -40,7 +42,7 @@ function SMODS.INIT.HillyMod()
         --     button = "Language Feedback",
         --     warning = {'This language is a shitpost.', 'Do not use it.', 'Click again to confirm'}
         -- }
-    end
+    --end
 
     -- fix voor texturepack rank van ace en king voor de hover over current cards menu
     --works on steammodded 0.9.5 but not on 0.9.8
