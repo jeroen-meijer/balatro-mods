@@ -13,3 +13,13 @@ __MACOSX
 # Windows
 ehthumbs.db
 Thumbs.db
+
+# Logs and other temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Temporary Lovely files
+lovely/
