@@ -7,12 +7,12 @@
 [submodule "MikasModCollection"]
 	path = MikasModCollection
 	url = https://github.com/MikaSchoenmakers/MikasBalatro
-[submodule "Steamodded"]
-	path = Steamodded
-	url = https://github.com/Steamopollys/Steamodded.git
 [submodule "JokerDisplay"]
 	path = JokerDisplay
 	url = https://github.com/nh6574/JokerDisplay
 [submodule "Better-Mouse-And-Gamepad"]
 	path = Better-Mouse-And-Gamepad
 	url = https://github.com/Kooluve/Better-Mouse-And-Gamepad
+[submodule "smods"]
+	path = smods
+	url = https://github.com/Steamodded/smods
