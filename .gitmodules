@@ -16,3 +16,6 @@
 [submodule "smods"]
 	path = smods
 	url = https://github.com/Steamodded/smods
+[submodule "Nopeus"]
+	path = Nopeus
+	url = https://github.com/stupxd/Nopeus
